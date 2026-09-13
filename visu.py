@@ -14,7 +14,6 @@ st.subheader("Dashboard Amper")
 
 #Metricas ↓
 
-
 met_data = main.f_ex__met_data()
 
 c1, c2, c3 = st.columns(3)
