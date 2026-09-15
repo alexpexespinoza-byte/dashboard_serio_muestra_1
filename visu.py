@@ -53,7 +53,7 @@ with (c3):
 
 c1, c2 = st.columns(2)
 
-#grf_1
+#grafica 1 ↓
 
 grf_1_data = main.f_ex__grf_1_data()
 
@@ -73,7 +73,7 @@ with(c1):
     st.plotly_chart(grf_1)
 
 
-#grf_2 ↓
+#grafica 2 ↓
 
 grf_2_data = main.f_ex__grf_2_data()
 
