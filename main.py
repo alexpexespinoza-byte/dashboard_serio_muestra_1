@@ -56,7 +56,3 @@ def f_ex__grf_2_data():
 
 
     return (data)
-
-
-
-print(f_ex__grf_2_data())
