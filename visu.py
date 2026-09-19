@@ -8,8 +8,7 @@ import met_script as met_s
 
 st.set_page_config(
     page_title="Dashboard Amper",
-    layout="wide",
-    initial_sidebar_state="collapsed",
+    layout="wide"
 )
 
 st.markdown(
