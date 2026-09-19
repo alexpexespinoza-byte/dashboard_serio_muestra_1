@@ -6,13 +6,39 @@ import met_script as met_s
 # cd "C:\Users\Leonel Espinoza\Desktop\archivos_de_py\dashboard_serio_muestra_1"
 # stremlit run "visu.py"
 
+st.set_page_config(
+    page_title="Dashboard Amper",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
 
-st.set_page_config(layout="wide")
+st.markdown(
+    """
+    <style>
+        .block-container {
+            padding-top: 30px !important;
+            padding-bottom: 10px !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+
+        .element-container {
+            margin-bottom: 0px !important
+        }
+
+        .stBlock {
+            margin-bottom: 0.2rem !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 st.subheader("Dashboard Amper")
 
 
 #Metricas ↓
+
 
 met_data = main.f_ex__met_data()
 
@@ -53,7 +79,7 @@ with (c3):
 
 c1, c2 = st.columns(2)
 
-#grafica 1 ↓
+#grf_1
 
 grf_1_data = main.f_ex__grf_1_data()
 
@@ -73,7 +99,7 @@ with(c1):
     st.plotly_chart(grf_1)
 
 
-#grafica 2 ↓
+#grf_2 ↓
 
 grf_2_data = main.f_ex__grf_2_data()
 
