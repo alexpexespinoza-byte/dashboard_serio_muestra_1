@@ -3,6 +3,8 @@ import streamlit as st
 
 # Documentacion de que hace cada cosa de la funcion xd ↓
 #
+#   llave "v" señala el valor
+#   llave "tv" señala el tamaño del valor
 #   llave "f" señala el formato del valor
 #   llave "c" señala el color del valor
 #   llave "d" señala si existe un valor delta dentro del valor
@@ -22,10 +24,11 @@ import streamlit as st
 @st.cache_data
 def f_ex__kpi_script_data(data=None, div=None, color_borde=None):
 
-    r_text = f"""<div style="padding: 15px; border: 1px solid {(color_borde) if (color_borde != None) else ("")}; font-family: Arial">"""
+    r_text = f"""<div style="padding: 5px; border: 1px solid {(color_borde) if (color_borde != None) else ("")}; font-family: Arial">"""
 
     if (div):
         r_text += f"""<div style="font-size: 20px; padding: 15px; border: 1px solid">{div}</div>"""
+        r_text += "<div>ㅤ<div>"
 
     for k, v in data.items():
         r_text += f"""<div style="font-size: 15px">{k}</div>"""
@@ -41,18 +44,19 @@ def f_ex__kpi_script_data(data=None, div=None, color_borde=None):
         else:
             None
 
-
-        if ((not "c" in v) and (not "d" in v)):
-            r_text += f"""<div style="font-size: 30px;">{v["v"]}</div>"""
+        tamaño_valor = ((25) if ("tv" not in v) else (v["tv"]))
 
         if ("c" in v):
             color = f"color: {v["c"]}"
-            r_text += f"""<div style="font-size: 30px; {color}">{v["v"]}</div>"""
+        else:
+            color = ""
+
+        r_text += f"""<div style="font-size: {tamaño_valor}px; {color}">{v["v"]}</div>"""
 
         if ("d" in v):
             delta_color = f"color: {("#00FF00") if (v["d"][0] > 0) else ("#FF0000")}"
             r_text += f"""<div style="font-size: 12px; {delta_color}">{v["d"][1]}</div>"""
-
+        
         if ("grf" in v):
             r_text += (
                 f"""
