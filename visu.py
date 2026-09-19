@@ -108,5 +108,9 @@ grf_2.update_traces(
     textfont=dict(color="#000000")
 )
 
+grf_2.update_layout(
+    showlegend=False
+)
+
 with (c2):
     st.plotly_chart(grf_2)
