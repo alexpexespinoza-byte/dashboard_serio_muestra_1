@@ -21,14 +21,6 @@ st.markdown(
             padding-left: 10px !important;
             padding-right: 10px !important;
         }
-
-        .element-container {
-            margin-bottom: 0px !important
-        }
-
-        .stBlock {
-            margin-bottom: 0.2rem !important;
-        }
     </style>
     """,
     unsafe_allow_html=True,
