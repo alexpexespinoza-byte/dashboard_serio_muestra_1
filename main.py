@@ -20,7 +20,6 @@ def f_ex__met_data():
         "met_3" : mejor_producto
     }
 
-
     return(data)
 
 
@@ -37,7 +36,6 @@ def f_ex__grf_1_data():
         "Ventas ($)" : list(productos_ventas.values())
     }) 
 
-
     return (data)
 
 
@@ -53,6 +51,5 @@ def f_ex__grf_2_data():
         "Dia de la Semana" : list(dia_semana_ventas.keys()),
         "Ventas ($)" : list(dia_semana_ventas.values())
     })
-
 
     return (data)
