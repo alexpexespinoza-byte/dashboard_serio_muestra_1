@@ -28,7 +28,8 @@ st.markdown(
 st.subheader("Dashboard Amper")
 
 
-#Metricas ↓
+
+#metricas ↓
 
 met_data = main.f_ex__met_data()
 
