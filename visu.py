@@ -4,7 +4,7 @@ import main
 import met_script as met_s
 
 #cd "C:\Users\Leonel Espinoza\Desktop\archivos_de_py\dashboard_serio_muestra_1"
-#stremlit run "visu.py"
+#streamlit run "visu.py"
 
 st.set_page_config(
     page_title="Dashboard Amper",
