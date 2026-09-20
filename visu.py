@@ -81,7 +81,6 @@ grf_1 = px.bar(
     color_discrete_sequence=["#000000"],
     title="Ventas por producto"
 )
-
 grf_1.update_layout(
     height=400
 )
@@ -100,13 +99,11 @@ grf_2 = px.pie(
     values="Ventas ($)",
     title="Distribucion de ventas por dia de la semana"
 )
-
 grf_2.update_traces(
     textinfo="label + value",
     texttemplate="%{label}<br>$%{value:,.2f}",
     textfont=dict(color="#000000")
 )
-
 grf_2.update_layout(
     showlegend=False
 )
